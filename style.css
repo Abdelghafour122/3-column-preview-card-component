@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --vd-cyan: hsl(179, 100%, 13%);
+
+  /* PARAGRAPHS */
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  /* BACKGROUNDS HEADING BUTTONS */
+  --vl-grey: hsl(0, 0%, 95%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Lexend Deca;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.component {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 50px 0;
+}
+@media (max-width: 768px) {
+  .component {
+    grid-template-columns: 290px;
+    grid-template-rows: repeat(3, 450px);
+    justify-content: center;
+    width: fit-content;
+    margin: 50px auto;
+  }
+}
+
+.component .card {
+  padding: 48px;
+}
+.component .card h1 {
+  color: var(--vl-grey);
+  text-transform: uppercase;
+  font-family: Big Shoulders Display;
+  font-size: 38px;
+}
+@media (max-width: 768px) {
+  .component .card h1 {
+    font-size: 33px;
+    margin: 25px 0;
+  }
+}
+
+.component .card p {
+  color: var(--transparent-white);
+  line-height: 1.5;
+  font-size: 15px;
+  margin-bottom: 88px;
+}
+@media (max-width: 768px) {
+  .component .card p {
+    margin-bottom: 35px;
+    margin-top: 0;
+  }
+}
+
+.component .card button {
+  padding: 15px 30px;
+  background-color: var(--vl-grey);
+  border: none;
+  font-family: inherit;
+  font-size: 16px;
+  border-radius: 300px;
+  transition: 0.3s;
+  border: 2px solid var(--vl-grey);
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .component .card button {
+    padding: 12px 25px;
+  }
+}
+
+.component .card button:hover {
+  background-color: transparent;
+  color: var(--vl-grey);
+}
+
+.component .card:nth-of-type(1) {
+  background-color: var(--bright-orange);
+}
+.component .card:nth-of-type(1) button {
+  color: var(--bright-orange);
+}
+.component .card:nth-of-type(1) button:hover {
+  color: var(--vl-grey);
+}
+
+.component .card:nth-of-type(2) {
+  background-color: var(--dark-cyan);
+}
+.component .card:nth-of-type(2) button {
+  color: var(--dark-cyan);
+}
+.component .card:nth-of-type(2) button:hover {
+  color: var(--vl-grey);
+}
+
+.component .card:nth-of-type(3) {
+  background-color: var(--vd-cyan);
+}
+.component .card:nth-of-type(3) button {
+  color: var(--vd-cyan);
+}
+.component .card:nth-of-type(3) button:hover {
+  color: var(--vl-grey);
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+}
+
+footer a {
+  color: royalblue;
+  text-decoration: underline dotted;
+  font-size: 18px;
+}
